@@ -37,3 +37,18 @@ function checkEmptyBox(){
 function removeBox(selectedElement){
   selectedElement.parentNode.parentNode.removeChild(selectedElement.parentNode);
 }
+
+function popUp() {
+    var popup = document.getElementById("myPopup");
+    popup.classList.toggle("show");
+}
+
+function popUp2() {
+    var popup = document.getElementById("myPopup2");
+    popup.classList.toggle("show");
+}
+
+function popUp3() {
+    var popup = document.getElementById("myPopup3");
+    popup.classList.toggle("show");
+}

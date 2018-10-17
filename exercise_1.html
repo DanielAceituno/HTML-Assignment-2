@@ -61,7 +61,7 @@ This code is exercise 1, but containing links to the versions of the page that h
 
           <ul class="header_list" id="tag_list"> <!--"Removable" tags section-->
           </ul>
-          
+
       </div>
 
       <div id="sr0" class="section_right_home"> <!--Used to place the image in the empty right section of the body-->
@@ -106,25 +106,103 @@ This code is exercise 1, but containing links to the versions of the page that h
           <h3>Last Opinions</h3>
           <div class="box_right">
               <img class="box_image" src="images/ElPaso.jpg" alt="ElPaso" width="80" height="80"> <!--each image is first located in the left with float: left-->
-              <h5>El Paso</h5> <!--Then some text made thoughtfully to fit in the space given by the image-->
+              <!--Then some text made thoughtfully to fit in the space given by the image-->
+              <h5 class="popup" onclick="popUp()">El Paso
+                  <div class="popuptext" id="myPopup">
+                    <img class="popup_image" src="images/ElPaso.jpg" alt="ElPaso" width="80" height="80">
+                    <p class="popupClose">X</p>
+                    <h2>El Paso</h2>
+                    <h4>Talavera de La Reina, Spain</h4>
+                    <h4>21/09/2018</h4>
+                    <br>
+                    <p>Full address: Calle Lisboa, s/n, 45600 Talavera de la Reina, Toledo</p>
+                    <p>Web site: <a href="http://complejoestoril.com/elpaso/">http://complejoestoril.com/elpaso/</a></p>
+                    <p>Phone number: 925 82 02 60</p>
+                    <p>Social Networks:</p>
+                    <div class="popup_icons">
+              			  <a href="https://www.facebook.com/el.p.restaurante/"><img class="popup_icon_img" id="fb" src="images/fb.png" alt="Facebook"></a>
+              			  <a href="https://twitter.com/El_Paso_Comedia"><img class="popup_icon_img" src="images/tw.png" alt="Twitter"></a>
+                      <a href="https://www.instagram.com/el_paso_comedia/"><img class="popup_icon_img" src="images/ins.png" alt="Instagram"></a>
+              			</div>
+                    <p>Type of food served: </p>
+                    <p>Price range: </p>
+                    <h2 class="popuphe">Opinion</h2>
+                    <p class="popupPar">With a great selection of innovative american food and comedy, El Paso presents itself as one of the most attractive restaurants in the city. This is not only about its food, but of the "Comedy Fridays", where famous spanish comedians ease the eating of the fortunate customers, who will have a great meal and an unforgetable experience.</p>
+                  </div>
+              </h5>
               <h5>Talavera de La Reina, Spain</h5>
               <h5>21/09/2018</h5>
               <p class="paragraph">With a great selection of innovative american food and comedy, El Paso presents itself as one of the most attractive restaurants in the city. This is not only about its food, but of the "Comedy Fridays", where famous spanish comedians ease the eating of the fortunate customers, who will have a great meal and an unforgetable experience.</p>
           </div>
+
+
+
           <div class="box_right">
               <img class="box_image" src="images/Tagliatella.jpg" alt="Tagliatella" width="80" height="80">
-              <h5>Tagliatella</h5>
+              <h5 class="popup" onclick="popUp2()">Tagliatella
+                  <div class="popuptext" id="myPopup2">
+                    <img class="popup_image" src="images/Tagliatella.jpg" alt="Tagliatella" width="80" height="80">
+                    <p class="popupClose">X</p>
+                    <h2>La Tagliatella</h2>
+                    <h4>Alcorcón, Spain</h4>
+                    <h4>>06/09/2018</h4>
+                    <br>
+                    <p>Full address:  Av. de la Libertad, 2, 28924 Alcorcón, Madrid</p>
+                    <p>Web site: <a href="https://www.latagliatella.es/">https://www.latagliatella.es/</a></p>
+                    <p>Phone number: 916 10 29 16</p>
+                    <p>Social Networks:</p>
+                    <div class="popup_icons">
+              			  <a href="https://www.facebook.com/LaTagliatella"><img class="popup_icon_img" id="fb" src="images/fb.png" alt="Facebook"></a>
+              			  <a href="https://twitter.com/LaTagliatella"><img class="popup_icon_img" src="images/tw.png" alt="Twitter"></a>
+                      <a href="https://www.instagram.com/latagliatella/"><img class="popup_icon_img" src="images/ins.png" alt="Instagram"></a>
+              			</div>
+                    <p>Type of food served: </p>
+                    <p>Price range: </p>
+                    <h2 class="popuphe">Opinion</h2>
+                    <p class="popupPar">Located inside a greatly decorated environment, La Tagliatella will make its customers rejoice with an incredible amount of plates greatly selected among the best typical italian food. Their secret: the high quality ingredients, the highly skilled cooks and the food amount (It won't dissappoint you!).</p>
+                  </div>
+              </h5>
               <h5>Alcorcón, Spain</h5>
               <h5>06/09/2018</h5>
               <p class="paragraph">Located inside a greatly decorated environment, La Tagliatella will make its customers rejoice with an incredible amount of plates greatly selected among the best typical italian food. Their secret: the high quality ingredients, the highly skilled cooks and the food amount (It won't dissappoint you!).</p>
           </div>
+
+
+
+
           <div class="box_right">
               <img class="box_image" src="images/rluna.jpg" alt="Ruiz de Luna" width="80" height="80">
-              <h5>Ruiz de Luna</h5>
+              <h5 class="popup" onclick="popUp3()">Ruiz de Luna
+                  <div class="popuptext" id="myPopup3">
+                    <img class="popup_image" src="images/ElPaso.jpg" alt="ElPaso" width="80" height="80">
+                    <p class="popupClose">X</p>
+                    <h2>Restaurante Ruiz de Luna</h2>
+                    <h4>Talavera de La Reina, Spain</h4>
+                    <h4>12/06/2018</h4>
+                    <br>
+                    <p>Full address: Av. de la Constitución, 7, 45600 Talavera de la Reina, Toledo</p>
+                    <p>Web site: <a href="https://restauranteruizdeluna.es/">https://restauranteruizdeluna.es/</a></p>
+                    <p>Phone number: 925 81 89 95</p>
+                    <p>Social Networks:</p>
+                    <div class="popup_icons">
+              			  <a href="https://es-es.facebook.com/ResaturanteRuizDeLuna/"><img class="popup_icon_img" id="fb" src="images/fb.png" alt="Facebook"></a>
+              			  <a href="https://twitter.com/llvna"><img class="popup_icon_img" src="images/tw.png" alt="Twitter"></a>
+                      <a href="https://www.instagram.com/ruizdeluna/"><img class="popup_icon_img" src="images/ins.png" alt="Instagram"></a>
+              			</div>
+                    <p>Type of food served: </p>
+                    <p>Price range: </p>
+                    <h2 class="popuphe">Opinion</h2>
+                    <p class="popupPar">A creative cuisine restaurant in the city of ceramic. An intensive study of the land's highest quality products, Ruiz de Luna does not forget its roots. The high level craftsmanship in the creation of their dishes presents a great love for tradition, definitely a meal that must be experienced by all visitors of the city.</p>
+                  </div>
+              </h5>
               <h5>Talavera de La Reina, Spain</h5>
               <h5>12/06/2018</h5>
               <p class="paragraph">A creative cuisine restaurant in the city of ceramic. An intensive study of the land's highest quality products, Ruiz de Luna does not forget its roots. The high level craftsmanship in the creation of their dishes presents a great love for tradition, definitely a meal that must be experienced by all visitors of the city.</p>
           </div>
+
+
+
+
           <img class="load_more" src="images/arrow_down.png" alt="Load More" width="15" height="15"> <!--An image we added representing a "load more" functionality (not implemented).-->
         </div>
       </div>

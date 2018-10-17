@@ -99,7 +99,7 @@ table{ /*Used for exercise_2_2, the table that contains the circles*/
   border: solid black 1px;
   width: 65%;
   float: right;
-  overflow: auto;
+  overflow: visible;
   background-color: #ffeb99;
   border-radius: 10px;
   display: none;
@@ -184,7 +184,9 @@ table{ /*Used for exercise_2_2, the table that contains the circles*/
 }
 
 .icon_img{ /*Each of the social network images present in the footer*/
-	margin-right: 10px;
+  border-left: solid black 1px;
+  padding-left: 10px;
+  margin-right: 10px;
 	margin-bottom: 10px;
 	height: 25px;
 	width: 25px;
@@ -192,8 +194,8 @@ table{ /*Used for exercise_2_2, the table that contains the circles*/
 }
 
 #fb{ /*Refers to the facebook image, since we chose it to make the requested vertical bar, taken from this image's right border*/
-	border-right: solid black 1px;
-	padding-right: 10px;
+  border: none;
+	padding-right: 0px;
 }
 
 .body_right{ /*Container of the elements inside the right side of the body*/
@@ -233,7 +235,7 @@ table{ /*Used for exercise_2_2, the table that contains the circles*/
 
 .box_right{ /*Container of each recent post*/
   border: solid black 1px;
-  overflow: auto;
+  overflow: visible;
   line-height: 40%;
   margin-bottom: 5%;
 }
@@ -253,4 +255,100 @@ table{ /*Used for exercise_2_2, the table that contains the circles*/
 
 .indiv_button{
   display: inline-block;
+}
+
+
+/*Popups*/
+/* Popup container*/
+.popup {
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 0px;
+    display: inline-block;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+    visibility: hidden;
+    cursor: default;
+    width: 600px;
+    background-color: #ffffcc;
+    box-shadow: 1px 1px darkgrey;
+    color: black;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: -250px;
+    left: 150px;
+    margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent #ffffcc transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+
+.popup_image{ /*Images in the popups*/
+  float:left;
+  margin: 1%;
+}
+
+.popuphe{
+    margin-left: 1.5%;
+}
+
+.popupPar{
+  line-height: 17px;
+}
+
+.popupClose{
+  float:right;
+  cursor: pointer;
+  margin-right: 2%;
+  margin-top: 2%;
+}
+
+.popup_icons{ /*Containers of the social network icons*/
+  display: inline-block;
+  margin-left: 5%;
+  padding-top: 0.5%;
+  padding-right: 1%;
+}
+
+.popup_icon_img{ /*Each of the social network images present in the footer*/
+	margin-right: 10px;
+	margin-bottom: 10px;
+	height: 25px;
+	width: 25px;
+
 }
