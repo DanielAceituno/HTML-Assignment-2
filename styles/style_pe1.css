@@ -350,5 +350,47 @@ table{ /*Used for exercise_2_2, the table that contains the circles*/
 	margin-bottom: 10px;
 	height: 25px;
 	width: 25px;
+}
 
+.halfContainer{
+  border: solid black 1px;
+  margin: 0 auto;
+  width: 50%;
+  background-color: #ffeb99;
+  border-radius: 10px;
+  display: none;
+}
+
+.loginButton{
+  width: 35%;
+  margin: 100px auto 0 auto;
+  border-radius: 30px;
+  border: solid darkgreen 1px;
+  background-color: green;
+  color: white;
+}
+
+.loginButton:hover{
+  background-color: darkgreen;
+}
+
+.regButton{
+  width: 35%;
+  margin: 25px auto 100px auto;
+  border-radius: 30px;
+  border: solid darkgreen 1px;
+  background-color: green;
+  color: white;
+}
+
+.regButton:hover{
+  background-color: darkgreen;
+}
+
+.buttonContent{
+  text-align: center;
+}
+
+.contentInputs{
+  margin: 2%;
 }

@@ -22,14 +22,14 @@ This code is exercise 1, but containing links to the versions of the page that h
             <li class="header_element"><a onclick="changeToHome()" href="#">Home</a></li>
             <li class="header_element"><a href="#">Posts</a></li>
             <li class="header_element"><a href="#">About</a></li>
-            <li class="header_element"><a href="#">Login</a></li>
+            <li class="header_element" onclick="changeToLogReg()"><a href="#">Login</a></li>
           </ul>
       </div>
     </header>
 	<br>
     <div class="body_section"> <!--It will contain the whole part between the header and the footer, divided in two sections (33%, 66%)-->
 
-      <div class="section_left"> <!--left part of the body:-->
+      <div class="section_left" id="sl"> <!--left part of the body:-->
         <!--This area will contain an image and the name of the current user, in this case a fictitious man we named James Garrido, then its personal information
         (a header and a block of text), the last opinions he published (kind of like a list, but intercalating with paragraphs), and a Preferences area containing
         the proposed "removable" tags-->
@@ -139,7 +139,7 @@ This code is exercise 1, but containing links to the versions of the page that h
 
           <div class="box_right">
               <img class="box_image" src="images/Tagliatella.jpg" alt="Tagliatella" width="80" height="80">
-              <h5 class="popup" onclick="popUp2()">Tagliatella
+              <h5 class="popup" onclick="popUp2()">La Tagliatella
                   <div class="popuptext" id="myPopup2">
                     <img class="popup_image" src="images/Tagliatella.jpg" alt="Tagliatella" width="80" height="80">
                     <p class="popupClose">X</p>
@@ -204,6 +204,50 @@ This code is exercise 1, but containing links to the versions of the page that h
 
 
           <img class="load_more" src="images/arrow_down.png" alt="Load More" width="15" height="15"> <!--An image we added representing a "load more" functionality (not implemented).-->
+        </div>
+      </div>
+
+      <div class="halfContainer" id="logReg">
+        <div class="loginButton">
+          <p class="buttonContent"><i>LOGIN</i></p>
+        </div>
+        <p class="buttonContent">or<p>
+        <div class="regButton" onclick="changeToRegister()">
+          <p class="buttonContent"><i>REGISTER</i></p>
+        </div>
+      </div>
+
+      <div class="halfContainer" id="register">
+        <div class="contentInputs">
+          <form>
+            Username:
+            <input type="text" class="input_whole" required>
+            <br><br>
+            Password:
+            <input type="password" class="input_whole" maxlength="8" required>
+            <br><br>
+            Name:
+            <input type="text" class="input_whole" required>
+            <br></br>
+            Surname:
+            <input type="text" class="input_whole" required>
+            <br><br>
+            Email:
+            <input type="email" class="input_whole" required>
+            <br><br>
+            Date of Birth:
+            <input type="Date" required>
+            <br><br>
+            Profile Image (URL format):
+            <input type="url" class="input_whole">
+            <br><br>
+            Address:
+            <input type="text" class="input_whole" required>
+            <br><br>
+            <input type="checkbox" required>I have read and accepted the Terms of Use.<br>
+            <br><br>
+            <input type="submit">
+          </form>
         </div>
       </div>
 

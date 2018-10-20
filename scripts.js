@@ -1,19 +1,46 @@
 function changeToLO(){
+    document.getElementById("sl").style.display="block";
     document.getElementById("sr0").style.display="none";
     document.getElementById("sr1").style.display="none";
     document.getElementById("sr2").style.display="block";
+    document.getElementById("logReg").style.display="none";
+    document.getElementById("register").style.display="none";
 }
 
 function changeToPI(){
+    document.getElementById("sl").style.display="block";
     document.getElementById("sr0").style.display="none";
     document.getElementById("sr1").style.display="block";
     document.getElementById("sr2").style.display="none";
+    document.getElementById("logReg").style.display="none";
+    document.getElementById("register").style.display="none";
 }
 
 function changeToHome(){
+    document.getElementById("sl").style.display="block";
     document.getElementById("sr0").style.display="block";
     document.getElementById("sr1").style.display="none";
     document.getElementById("sr2").style.display="none";
+    document.getElementById("logReg").style.display="none";
+    document.getElementById("register").style.display="none";
+}
+
+function changeToLogReg(){
+    document.getElementById("sl").style.display="none";
+    document.getElementById("sr0").style.display="none";
+    document.getElementById("sr1").style.display="none";
+    document.getElementById("sr2").style.display="none";
+    document.getElementById("logReg").style.display="block";
+    document.getElementById("register").style.display="none";
+}
+
+function changeToRegister(){
+  document.getElementById("sl").style.display="none";
+  document.getElementById("sr0").style.display="none";
+  document.getElementById("sr1").style.display="none";
+  document.getElementById("sr2").style.display="none";
+  document.getElementById("logReg").style.display="none";
+  document.getElementById("register").style.display="block";
 }
 
 function addTag(){
