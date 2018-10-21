@@ -1,0 +1,412 @@
+body{
+  font-family: sans-serif; /*choosing the desired font for the whole document*/
+  background-image: url("../images/wood2.jpg");  /*Background image for decorative purposes*/
+}
+
+div img{
+  float: left; /*Made to affect mainly the image given in the header*/
+}
+
+a{
+  text-decoration: none; /*We decided to avoid having links be too flashy in the headers of the left section, so we gave them no special format (That is why we added the ">" on them, to make it notice they are links)*/
+}
+
+li a{ /*For the buttons on the header*/
+  text-align: center;
+  padding: 14px 40px; /*To adjust them as we desired*/
+  text-decoration: none;
+}
+
+table{ /*Used for exercise_2_2, the table that contains the circles*/
+  width: 100%;
+}
+
+.header{ /*Formatting of the header as a single block*/
+  padding: 5px;
+  border: solid black 1px;
+  overflow: auto;
+  background-color: #ffeb99; /*Color that will be used for all the big blocks*/
+  border-radius: 10px; /*Added in all the divs with border for aesthetical reasons*/
+}
+
+.header1{ /*Left side of the header (Image and title)*/
+  text-transform: uppercase;
+  text-shadow: 3px 2px grey;
+  float: left;
+  width: 50%;
+  background-color: #ffeb99;
+}
+.header2{ /*Right side of the header (Buttons)*/
+  text-transform: uppercase;
+  float: right;
+  padding-top: 1%;
+}
+
+.titles_div{ /*Container of the page's title*/
+  text-transform: uppercase;
+  padding-top: 10px;
+  margin-left: 15px;
+}
+
+.content_title{ /*Affects the text of the title itself*/
+  display: inline;
+}
+.header_list{ /*List containing the buttons*/
+  list-style-type: none;
+  margin: 0;
+  overflow: hidden;
+}
+
+.header_element{ /*Each button*/
+  margin: 0;
+  display: inline-block;
+}
+
+/*Section regarding the header's links*/
+.header_element a:link{
+  color: black;
+}
+
+.header_element a:visited{
+  color: #444;
+}
+
+.header_element a:hover{
+  color: #000;
+  font-weight: bold;
+  background-color: grey;
+}
+/*End of section regarding the links*/
+
+.body_section{ /*This controls that both the left and right section of the body always have the same height for aesthetical purposes*/
+  display: flex;
+  flex-wrap: nowrap;
+}
+.section_left{ /*This is the container for everything in the left section of the body*/
+  padding: 5px;
+  margin-right: 3px;
+  border: solid black 1px;
+  width: 33%;
+  float: left;
+  overflow: auto;
+  background-color: #ffeb99;
+  border-radius: 10px;
+  display: none;
+}
+
+.section_right{ /*This is the container for everything in the right section of the body*/
+  padding: 5px;
+  margin-left: 3px;
+  border: solid black 1px;
+  width: 65%;
+  float: right;
+  overflow: visible;
+  background-color: #ffeb99;
+  border-radius: 10px;
+  display: none;
+}
+
+.section_right_home{ /*It is used in the main page to include an image in the whole right section of the body*/
+  width: 66%;
+  background-image: url("../images/rest.jpg");
+  background-size: 100% 100%;
+  opacity: 0.8;
+  border: solid black 1px;
+  border-radius: 10px;
+  display: none;
+}
+
+.para_left{ /*For the paragraphs in the left section*/
+  margin-left: 40px;
+  margin-right: 3%;
+  margin-top: 10px;
+  overflow: auto;
+}
+
+.h_left{ /*The three headers of the left section*/
+  margin: 10px 0px 10px 20px;
+  color: black;
+}
+
+.list_left{ /*For the "list" (looks like a list but it's not) of recent posts in the left section*/
+  list-style-type: none;
+  margin: 0;
+  padding: 6px 0px;
+  padding-left: 10%;
+  overflow: hidden;
+  line-height: 10px;
+}
+
+.p_left{ /*For the paragraphs inside the said "list"*/
+  margin-left: 10%;
+  margin-right: 3%;
+  line-height: 17px;
+}
+
+
+.button_plus { /*Refers to the "add a new tag" button displaying a "+" symbol*/
+  margin-top: 1%;
+  margin-right: 3%;
+  float: right;
+}
+
+.element_preference{ /*Refers to each of the "closable" tags*/
+  padding: 0px 3px;
+  border: solid black 1px;
+  display: inline-block;
+  margin: 1% 1%;
+  background-color: #ffc266;
+  border-radius: 5%;
+}
+
+.element_preference button{ /*Refers to the button inside each tag*/
+  background-color: orange;
+}
+
+.footer_list{ /*Refers to the elements of the footer*/
+  list-style-type: none;
+}
+
+.foot{ /*Container of the footer*/
+	margin-top: 1%;
+  border: solid black 1px;
+  overflow: hidden;
+  background-color: #ffeb99;
+  border-radius: 10px;
+}
+
+.copyright{ /*At the left of the footer*/
+	float: left;
+}
+
+.icons{ /*Containers of the social network icons*/
+	float: right;
+  padding-top: 0.5%;
+  padding-right: 1%;
+}
+
+.icon_img{ /*Each of the social network images present in the footer*/
+  border-left: solid black 1px;
+  padding-left: 10px;
+  margin-right: 10px;
+	margin-bottom: 10px;
+	height: 25px;
+	width: 25px;
+
+}
+
+#fb{ /*Refers to the facebook image, since we chose it to make the requested vertical bar, taken from this image's right border*/
+  border: none;
+	padding-right: 0px;
+}
+
+.body_right{ /*Container of the elements inside the right side of the body*/
+  margin: 0% 5%;
+}
+
+.input_left{ /*Refers to the fillable forms placed on the left*/
+  float: left;
+  width: 48%;
+}
+
+.input_right{ /*Refers to the fillable forms placed on the right*/
+  float: right;
+  width: 48%;
+}
+
+.input_whole{ /*Refers to the fillable forms that cover the whole row*/
+  width: 99.5%;
+}
+
+.circle_section{ /*Container of the circles*/
+  text-align: center;
+}
+
+.circle { /*Refers to each individual circle*/
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    text-align: center;
+    border: 1px solid black;
+    display: inline-grid;
+}
+
+.paragraph{ /*Defines the line spacing between lines of the paragraphs in the right section of exercise_2_3*/
+  line-height: 1.6;
+}
+
+.box_right{ /*Container of each recent post*/
+  border: solid black 1px;
+  overflow: visible;
+  line-height: 40%;
+  margin-bottom: 5%;
+}
+
+.box_image{ /*Refers to the image in each recent post*/
+  float:left;
+  margin: 1%;
+}
+
+.load_more{ /*Container of the "load more" image*/
+  margin-left: 50%;
+}
+
+.box_right p{ /*Affects the paragraphs of the right side of the body in exercise_2_3*/
+  margin-left: 2%;
+}
+
+.indiv_button{
+  display: inline-block;
+}
+
+
+/*Popups*/
+/* Popup container*/
+.popup {
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 0px;
+    display: inline-block;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+    visibility: hidden;
+    cursor: default;
+    width: 600px;
+    background-color: #ffffcc;
+    box-shadow: 1px 1px darkgrey;
+    color: black;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: -250px;
+    left: 150px;
+    margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent #ffffcc transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+
+.popup_image{ /*Images in the popups*/
+  float:left;
+  margin: 1%;
+}
+
+.popuphe{
+    margin-left: 1.5%;
+}
+
+.popupPar{
+  line-height: 17px;
+}
+
+.popupClose{
+  float:right;
+  cursor: pointer;
+  margin-right: 2%;
+  margin-top: 2%;
+}
+
+.popup_icons{ /*Containers of the social network icons*/
+  display: inline-block;
+  margin-left: 5%;
+  padding-top: 0.5%;
+  padding-right: 1%;
+}
+
+.popup_icon_img{ /*Each of the social network images present in the footer*/
+	margin-right: 10px;
+	margin-bottom: 10px;
+	height: 25px;
+	width: 25px;
+}
+
+.halfContainer{
+  border: solid black 1px;
+  margin: 0 auto;
+  width: 50%;
+  background-color: #ffeb99;
+  border-radius: 10px;
+  display: block;
+}
+
+.loginButton{
+  width: 35%;
+  margin: 100px auto 0 auto;
+  border-radius: 30px;
+  border: solid darkgreen 1px;
+  background-color: green;
+  color: white;
+  cursor: pointer;
+}
+
+.loginButton:hover{
+  background-color: darkgreen;
+}
+
+.regButton{
+  width: 35%;
+  margin: 25px auto 100px auto;
+  border-radius: 30px;
+  border: solid darkgreen 1px;
+  background-color: green;
+  color: white;
+  cursor: pointer;
+}
+
+.regButton:hover{
+  background-color: darkgreen;
+}
+
+.buttonContent{
+  text-align: center;
+}
+
+.contentInputs{
+  margin: 2%;
+}
+
+#logout{
+  display: none;
+}
+
+#loginSite{
+  display: none;
+}
+
+#register{
+  display:none;
+}

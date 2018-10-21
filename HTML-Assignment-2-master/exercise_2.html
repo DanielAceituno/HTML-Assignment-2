@@ -1,0 +1,285 @@
+<!--This code is used as a main page for exercise 2, even though it is not directly requested, we thought it was tangentially necessary for a good presentation of our work.
+This code is exercise 1, but containing links to the versions of the page that had to be done for exercise 2-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Good Food!</title>
+  <link rel="stylesheet" type="text/css" href="styles/style_pe1.css">
+  <script src="scripts.js"></script>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+    <header class="header">
+      <div class="header1"> <!--This part defines the left section of the header: The logo and the title-->
+        <img src="images/icon.png" alt="Logo" width="60" height="60"> <!--Logo of the webpage-->
+        <div class="titles_div"> <!--Title of the webpage, has a class to define its format-->
+          <h1 class="content_title">Best Food</h1>
+        </div>
+      </div>
+      <div class="header2"> <!--Contains the right part of the header: selection menu-->
+          <ul class="header_list">
+            <li class="header_element"><a onclick="changeToHome()" href="#">Home</a></li>
+            <li class="header_element"><a href="#">Posts</a></li>
+            <li id="logout" class="header_element" onclick="logout()"><a href="#">Logout</a></li>
+            <li id="login" class="header_element" onclick="changeToLogReg()"><a href="#">Login</a></li>
+          </ul>
+      </div>
+    </header>
+	<br>
+    <div class="body_section"> <!--It will contain the whole part between the header and the footer, divided in two sections (33%, 66%)-->
+
+      <div class="section_left" id="sl"> <!--left part of the body:-->
+        <!--This area will contain an image and the name of the current user, in this case a fictitious man we named James Garrido, then its personal information
+        (a header and a block of text), the last opinions he published (kind of like a list, but intercalating with paragraphs), and a Preferences area containing
+        the proposed "removable" tags-->
+        <img src="images/user.png" alt="Profile Picture" width="75" height="75">
+        <div class="titles_div"> <!--class added to adjust the margins and padding-->
+          <h2 id="HeaderUsername">James Garrido</h2>
+        </div>
+          <br>
+          <a href="#"><h3 class="h_left" onclick="changeToPI()">>Personal Information</h3></a> <!--The class is used several times for text format purposes, it contains a link to the Personal Information version of the page-->
+          <p class="para_left">Nice to meet you! I love travelling and trying out food from all around the world.</p>
+
+          <hr> <!--This will be used several times to differentiate between areas-->
+
+          <a href="#"><h3 class="h_left" onclick="changeToLO()">>Last Opinions</h3></a> <!--Unlike in exercise 1, it now contains a link to the Last Opinions version of the page-->
+          <div class="list_left">
+            <a href="http://complejoestoril.com/elpaso/">Restaurante El Paso</a>
+            <p class="p_left">Top-tier comedy while enjoying a great american-styled meal.</p>
+            <a href="https://www.latagliatella.es/">Tagliatella</a>
+            <p class="p_left">Delicious italian food in a classy restaurant.</p>
+            <a href="https://restauranteruizdeluna.es/">Restaurante Ruiz de Luna</a>
+            <p class="p_left">Innovative cuisine with a luxurious feel.</p>
+          </div>
+
+          <hr>
+
+
+          <a href="#"><h3 class="h_left">>My Preferences<button class="button_plus" onclick="addTag()">+</button></h3></a>
+
+
+          <ul class="header_list" id="tag_list"> <!--"Removable" tags section-->
+          </ul>
+
+      </div>
+
+      <div id="sr0" class="section_right_home"> <!--Used to place the image in the empty right section of the body-->
+      </div>
+
+      <div id="sr1" class="section_right"> <!--This section will contain a fillable form and a block showing the user's statistics in the page-->
+        <div class="body_right">
+          <h3>Personal Information</h3>
+          <!--The fillable form is divided into three possible classes: input_left, for those fillables in the left, input_right for those in the right and input_whole for those covering 100% of the text line-->
+          <input type="text" placeholder="Name" class="input_left">
+          <input type="text" placeholder="Surname" class="input_right">
+          <br><br>
+          <input type="text" placeholder="Email" class="input_whole">
+          <br><br>
+          <input type="text" placeholder="Address" class="input_left">
+          <input type="text" placeholder="Mobile Phone" class="input_right">
+          <br><br>
+          <input type="text" placeholder="Birthday" class="input_whole">
+          <br><br>
+
+          <hr>
+
+          <h3>My Activity in the App</h3>
+          <!--This area will show the statistics in the shape of circles, who were defined in the CSS document-->
+          <!--They were organised as a table of one row, even though this is not responsive, this issue is solved in exercise 3-->
+          <br><br>
+          <div class="circle_section">
+            <table>
+              <tr>
+                <td><div class="circle"><p>X</p><p>points</p></div></td>
+                <td><div class="circle"><p>2</p><p>level</p></div></td>
+                <td><div class="circle"><p>3</p><p>opinions</p></div></td>
+                <td><div class="circle"><p>5</p><p>photos</p></div></td>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div id="sr2" class="section_right">
+        <!--This section will contain three blocks combining images and text-->
+        <div class="body_right">
+          <h3>Last Opinions</h3>
+          <div class="box_right">
+              <img class="box_image" src="images/ElPaso.jpg" alt="ElPaso" width="80" height="80"> <!--each image is first located in the left with float: left-->
+              <!--Then some text made thoughtfully to fit in the space given by the image-->
+              <h5 class="popup" onclick="popUp()">El Paso
+                  <div class="popuptext" id="myPopup">
+                    <img class="popup_image" src="images/ElPaso.jpg" alt="ElPaso" width="80" height="80">
+                    <p class="popupClose">X</p>
+                    <h2>El Paso</h2>
+                    <h4>Talavera de La Reina, Spain</h4>
+                    <h4>21/09/2018</h4>
+                    <br>
+                    <p>Full address: Calle Lisboa, s/n, 45600 Talavera de la Reina, Toledo</p>
+                    <p>Web site: <a href="http://complejoestoril.com/elpaso/">http://complejoestoril.com/elpaso/</a></p>
+                    <p>Phone number: 925 82 02 60</p>
+                    <p>Social Networks:</p>
+                    <div class="popup_icons">
+              			  <a href="https://www.facebook.com/el.p.restaurante/"><img class="popup_icon_img" id="fb" src="images/fb.png" alt="Facebook"></a>
+              			  <a href="https://twitter.com/El_Paso_Comedia"><img class="popup_icon_img" src="images/tw.png" alt="Twitter"></a>
+                      <a href="https://www.instagram.com/el_paso_comedia/"><img class="popup_icon_img" src="images/ins.png" alt="Instagram"></a>
+              			</div>
+                    <p>Type of food served: </p>
+                    <p>Price range: </p>
+                    <h2 class="popuphe">Opinion</h2>
+                    <p class="popupPar">With a great selection of innovative american food and comedy, El Paso presents itself as one of the most attractive restaurants in the city. This is not only about its food, but of the "Comedy Fridays", where famous spanish comedians ease the eating of the fortunate customers, who will have a great meal and an unforgetable experience.</p>
+                  </div>
+              </h5>
+              <h5>Talavera de La Reina, Spain</h5>
+              <h5>21/09/2018</h5>
+              <p class="paragraph">With a great selection of innovative american food and comedy, El Paso presents itself as one of the most attractive restaurants in the city. This is not only about its food, but of the "Comedy Fridays", where famous spanish comedians ease the eating of the fortunate customers, who will have a great meal and an unforgetable experience.</p>
+          </div>
+
+
+
+          <div class="box_right">
+              <img class="box_image" src="images/Tagliatella.jpg" alt="Tagliatella" width="80" height="80">
+              <h5 class="popup" onclick="popUp2()">La Tagliatella
+                  <div class="popuptext" id="myPopup2">
+                    <img class="popup_image" src="images/Tagliatella.jpg" alt="Tagliatella" width="80" height="80">
+                    <p class="popupClose">X</p>
+                    <h2>La Tagliatella</h2>
+                    <h4>Alcorcón, Spain</h4>
+                    <h4>>06/09/2018</h4>
+                    <br>
+                    <p>Full address:  Av. de la Libertad, 2, 28924 Alcorcón, Madrid</p>
+                    <p>Web site: <a href="https://www.latagliatella.es/">https://www.latagliatella.es/</a></p>
+                    <p>Phone number: 916 10 29 16</p>
+                    <p>Social Networks:</p>
+                    <div class="popup_icons">
+              			  <a href="https://www.facebook.com/LaTagliatella"><img class="popup_icon_img" id="fb" src="images/fb.png" alt="Facebook"></a>
+              			  <a href="https://twitter.com/LaTagliatella"><img class="popup_icon_img" src="images/tw.png" alt="Twitter"></a>
+                      <a href="https://www.instagram.com/latagliatella/"><img class="popup_icon_img" src="images/ins.png" alt="Instagram"></a>
+              			</div>
+                    <p>Type of food served: </p>
+                    <p>Price range: </p>
+                    <h2 class="popuphe">Opinion</h2>
+                    <p class="popupPar">Located inside a greatly decorated environment, La Tagliatella will make its customers rejoice with an incredible amount of plates greatly selected among the best typical italian food. Their secret: the high quality ingredients, the highly skilled cooks and the food amount (It won't dissappoint you!).</p>
+                  </div>
+              </h5>
+              <h5>Alcorcón, Spain</h5>
+              <h5>06/09/2018</h5>
+              <p class="paragraph">Located inside a greatly decorated environment, La Tagliatella will make its customers rejoice with an incredible amount of plates greatly selected among the best typical italian food. Their secret: the high quality ingredients, the highly skilled cooks and the food amount (It won't dissappoint you!).</p>
+          </div>
+
+
+
+
+          <div class="box_right">
+              <img class="box_image" src="images/rluna.jpg" alt="Ruiz de Luna" width="80" height="80">
+              <h5 class="popup" onclick="popUp3()">Ruiz de Luna
+                  <div class="popuptext" id="myPopup3">
+                    <img class="popup_image" src="images/rluna.jpg" alt="Ruiz de Luna" width="80" height="80">
+                    <p class="popupClose">X</p>
+                    <h2>Restaurante Ruiz de Luna</h2>
+                    <h4>Talavera de La Reina, Spain</h4>
+                    <h4>12/06/2018</h4>
+                    <br>
+                    <p>Full address: Av. de la Constitución, 7, 45600 Talavera de la Reina, Toledo</p>
+                    <p>Web site: <a href="https://restauranteruizdeluna.es/">https://restauranteruizdeluna.es/</a></p>
+                    <p>Phone number: 925 81 89 95</p>
+                    <p>Social Networks:</p>
+                    <div class="popup_icons">
+              			  <a href="https://es-es.facebook.com/ResaturanteRuizDeLuna/"><img class="popup_icon_img" id="fb" src="images/fb.png" alt="Facebook"></a>
+              			  <a href="https://twitter.com/llvna"><img class="popup_icon_img" src="images/tw.png" alt="Twitter"></a>
+                      <a href="https://www.instagram.com/ruizdeluna/"><img class="popup_icon_img" src="images/ins.png" alt="Instagram"></a>
+              			</div>
+                    <p>Type of food served: </p>
+                    <p>Price range: </p>
+                    <h2 class="popuphe">Opinion</h2>
+                    <p class="popupPar">A creative cuisine restaurant in the city of ceramic. An intensive study of the land's highest quality products, Ruiz de Luna does not forget its roots. The high level craftsmanship in the creation of their dishes presents a great love for tradition, definitely a meal that must be experienced by all visitors of the city.</p>
+                  </div>
+              </h5>
+              <h5>Talavera de La Reina, Spain</h5>
+              <h5>12/06/2018</h5>
+              <p class="paragraph">A creative cuisine restaurant in the city of ceramic. An intensive study of the land's highest quality products, Ruiz de Luna does not forget its roots. The high level craftsmanship in the creation of their dishes presents a great love for tradition, definitely a meal that must be experienced by all visitors of the city.</p>
+          </div>
+
+
+
+
+          <img class="load_more" src="images/arrow_down.png" alt="Load More" width="15" height="15"> <!--An image we added representing a "load more" functionality (not implemented).-->
+        </div>
+      </div>
+
+      <div class="halfContainer" id="logReg">
+        <div class="loginButton" onclick="changeToLogin()">
+          <p class="buttonContent"><i>LOGIN</i></p>
+        </div>
+        <p class="buttonContent">or<p>
+        <div class="regButton" onclick="changeToRegister()">
+          <p class="buttonContent"><i>REGISTER</i></p>
+        </div>
+      </div>
+
+      <div class="halfContainer" id="loginSite">
+        <div class="contentInputs">
+          <form onsubmit="checkLoginCookie()">
+            Email:
+            <input id="emaillogin" type="email" class="input_whole" required>
+            <br><br>
+            Password:
+            <input id="passlogin" type="password" class="input_whole" maxlength="8" required>
+            <br><br>
+            <input type="submit" value="Submit">
+          </form>
+        </div>
+      </div>
+
+      <div class="halfContainer" id="register">
+        <div class="contentInputs">
+          <form onsubmit="checkCookie()">
+            Username:
+            <input id="user" type="text" class="input_whole" required>
+            <br><br>
+            Password:
+            <input id="pass" type="password" class="input_whole" maxlength="8" required>
+            <br><br>
+            Name:
+            <input id="name" type="text" class="input_whole" required>
+            <br></br>
+            Surname:
+            <input id="surname" type="text" class="input_whole" required>
+            <br><br>
+            Email:
+            <input id="email" type="email" class="input_whole" required>
+            <br><br>
+            Date of Birth:
+            <input id="birth" type="Date" required>
+            <br><br>
+            Profile Image (URL format):
+            <input id="image" type="url" class="input_whole">
+            <br><br>
+            Address:
+            <input id="address" type="text" class="input_whole" required>
+            <br><br>
+            <input id="terms" type="checkbox" required>I have read and accepted the Terms of Use.<br>
+            <br><br>
+            <input type="submit" value="Submit">
+          </form>
+        </div>
+      </div>
+
+    </div>
+
+    <footer class="foot"> <!--Footer section containing the copyright (a simple paragraph) and the images represententing social networks-->
+  		<div class="footer_list">
+  			<div class="copyright">
+  			  <p>© Best Food S.L. 2018</p>
+  			</div>
+  			<div class="icons">
+  			  <a href="#"><img class="icon_img" id="fb" src="images/fb.png" alt="Facebook"></a>
+  			  <a href="#"><img class="icon_img" src="images/tw.png" alt="Twitter"></a>
+  			</div>
+  		</div>
+
+  	</footer>
+
+
+</body>
+</html>
