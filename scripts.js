@@ -148,11 +148,17 @@ function checkCookie() {
      if(document.getElementById("image").value!=""){
        setCookie("image", document.getElementById("image").value, 360);
        document.getElementById("ProfileImage").scr=getCookie("image");
-       alert("I tried T.T");
      }
      document.getElementById("HeaderUsername").innerHTML= getCookie("name") + " " + getCookie("surname");
      document.getElementById("login").style.display="none";
      document.getElementById("logout").style.display="inline-block";
+
+     document.getElementById("name2").placeholder= "Actual name: "+getCookie("name");
+     document.getElementById("surname2").placeholder= "Actual surname: "+getCookie("surname");
+     document.getElementById("email2").placeholder= "Actual email: "+getCookie("email");
+     document.getElementById("address2").placeholder= "Actual address: "+getCookie("address");
+     document.getElementById("birth2").value= getCookie("birth");
+     document.getElementById("phone").placeholder= "Phone number";
      logged=true;
      changeToHome();
      alert("You have registered and logged in correctly!");
@@ -186,28 +192,54 @@ function checkLoginCookie(){
   else{
     alert("The specified email is not registered");
   }
+
+  document.getElementById("name2").placeholder= "Actual name: "+getCookie("name");
+  document.getElementById("surname2").placeholder= "Actual surname: "+getCookie("surname");
+  document.getElementById("email2").placeholder= "Actual email: "+getCookie("email");
+  document.getElementById("address2").placeholder= "Actual address: "+getCookie("address");
+  document.getElementById("birth2").value= getCookie("birth");
+  document.getElementById("phone").placeholder= "Phone number";
 }
 
 function ChangeCookies(){
+
   if(document.getElementById("name2").value!=""){
     setCookie("name", document.getElementById("name2").value, 360);
     document.getElementById("HeaderUsername").innerHTML= getCookie("name") + " " + getCookie("surname");
+  }
+  else{
+    alert("Your name will not be modified");
   }
   if(document.getElementById("surname2").value!=""){
     setCookie("surname", document.getElementById("surname2").value, 360);
     document.getElementById("HeaderUsername").innerHTML= getCookie("name") + " " + getCookie("surname");
   }
+  else{
+    alert("Your surname will not be modified");
+  }
   if(document.getElementById("email2").value!=""){
     setCookie("email", document.getElementById("email2").value, 360);
+  }
+  else{
+    alert("Your email will not be modified");
   }
   if(document.getElementById("address2").value!=""){
     setCookie("address", document.getElementById("address2").value, 360);
   }
+  else{
+    alert("Your address will not be modified");
+  }
   if(document.getElementById("phone").value!=""){
     setCookie("phone", document.getElementById("phone").value, 360);
   }
+  else{
+    alert("Your phone number will not be modified");
+  }
   if(document.getElementById("birth2").value!=""){
     setCookie("birth", document.getElementById("birth2").value, 360);
+  }
+  else{
+    alert("Your birthdate will not be modified");
   }
   alert("information successfully changed");
 }
