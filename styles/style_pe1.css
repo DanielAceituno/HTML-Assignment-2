@@ -91,6 +91,7 @@ table{ /*Used for exercise_2_2, the table that contains the circles*/
   overflow: auto;
   background-color: #ffeb99;
   border-radius: 10px;
+  display: none;
 }
 
 .section_right{ /*This is the container for everything in the right section of the body*/
@@ -112,6 +113,7 @@ table{ /*Used for exercise_2_2, the table that contains the circles*/
   opacity: 0.8;
   border: solid black 1px;
   border-radius: 10px;
+  display: none;
 }
 
 .para_left{ /*For the paragraphs in the left section*/
@@ -358,7 +360,7 @@ table{ /*Used for exercise_2_2, the table that contains the circles*/
   width: 50%;
   background-color: #ffeb99;
   border-radius: 10px;
-  display: none;
+  display: block;
 }
 
 .loginButton{
@@ -368,6 +370,7 @@ table{ /*Used for exercise_2_2, the table that contains the circles*/
   border: solid darkgreen 1px;
   background-color: green;
   color: white;
+  cursor: pointer;
 }
 
 .loginButton:hover{
@@ -381,6 +384,7 @@ table{ /*Used for exercise_2_2, the table that contains the circles*/
   border: solid darkgreen 1px;
   background-color: green;
   color: white;
+  cursor: pointer;
 }
 
 .regButton:hover{
@@ -393,4 +397,16 @@ table{ /*Used for exercise_2_2, the table that contains the circles*/
 
 .contentInputs{
   margin: 2%;
+}
+
+#logout{
+  display: none;
+}
+
+#loginSite{
+  display: none;
+}
+
+#register{
+  display:none;
 }

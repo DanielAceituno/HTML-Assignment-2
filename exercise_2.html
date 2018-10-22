@@ -21,8 +21,8 @@ This code is exercise 1, but containing links to the versions of the page that h
           <ul class="header_list">
             <li class="header_element"><a onclick="changeToHome()" href="#">Home</a></li>
             <li class="header_element"><a href="#">Posts</a></li>
-            <li class="header_element"><a href="#">About</a></li>
-            <li class="header_element" onclick="changeToLogReg()"><a href="#">Login</a></li>
+            <li id="logout" class="header_element" onclick="logout()"><a href="#">Logout</a></li>
+            <li id="login" class="header_element" onclick="changeToLogReg()"><a href="#">Login</a></li>
           </ul>
       </div>
     </header>
@@ -33,9 +33,9 @@ This code is exercise 1, but containing links to the versions of the page that h
         <!--This area will contain an image and the name of the current user, in this case a fictitious man we named James Garrido, then its personal information
         (a header and a block of text), the last opinions he published (kind of like a list, but intercalating with paragraphs), and a Preferences area containing
         the proposed "removable" tags-->
-        <img src="images/user.png" alt="Profile Picture" width="75" height="75">
+        <img id="ProfileImage" src="images/user.png" alt="Profile Picture" width="75" height="75">
         <div class="titles_div"> <!--class added to adjust the margins and padding-->
-          <h2>James Garrido</h2>
+          <h2 id="HeaderUsername">James Garrido</h2>
         </div>
           <br>
           <a href="#"><h3 class="h_left" onclick="changeToPI()">>Personal Information</h3></a> <!--The class is used several times for text format purposes, it contains a link to the Personal Information version of the page-->
@@ -71,17 +71,21 @@ This code is exercise 1, but containing links to the versions of the page that h
         <div class="body_right">
           <h3>Personal Information</h3>
           <!--The fillable form is divided into three possible classes: input_left, for those fillables in the left, input_right for those in the right and input_whole for those covering 100% of the text line-->
-          <input type="text" placeholder="Name" class="input_left">
-          <input type="text" placeholder="Surname" class="input_right">
-          <br><br>
-          <input type="text" placeholder="Email" class="input_whole">
-          <br><br>
-          <input type="text" placeholder="Address" class="input_left">
-          <input type="text" placeholder="Mobile Phone" class="input_right">
-          <br><br>
-          <input type="text" placeholder="Birthday" class="input_whole">
-          <br><br>
-
+          <div>
+            <form onsubmit="ChangeCookies()">
+              <input id="name2" type="text" placeholder="Name" class="input_left">
+              <input id="surname2" type="text" placeholder="Surname" class="input_right">
+              <br><br>
+              <input id="email2" type="email" placeholder="Email" class="input_whole">
+              <br><br>
+              <input id="address2" type="text" placeholder="Address" class="input_left">
+              <input id="phone" type="text" placeholder="Mobile Phone" class="input_right">
+              <br><br>
+              <input id="birth2" type="Date" placeholder="Birthday" class="input_whole">
+              <br><br>
+              <input type="submit" value="Submit">
+            </form>
+          </div>
           <hr>
 
           <h3>My Activity in the App</h3>
@@ -174,7 +178,7 @@ This code is exercise 1, but containing links to the versions of the page that h
               <img class="box_image" src="images/rluna.jpg" alt="Ruiz de Luna" width="80" height="80">
               <h5 class="popup" onclick="popUp3()">Ruiz de Luna
                   <div class="popuptext" id="myPopup3">
-                    <img class="popup_image" src="images/ElPaso.jpg" alt="ElPaso" width="80" height="80">
+                    <img class="popup_image" src="images/rluna.jpg" alt="Ruiz de Luna" width="80" height="80">
                     <p class="popupClose">X</p>
                     <h2>Restaurante Ruiz de Luna</h2>
                     <h4>Talavera de La Reina, Spain</h4>
@@ -208,7 +212,7 @@ This code is exercise 1, but containing links to the versions of the page that h
       </div>
 
       <div class="halfContainer" id="logReg">
-        <div class="loginButton">
+        <div class="loginButton" onclick="changeToLogin()">
           <p class="buttonContent"><i>LOGIN</i></p>
         </div>
         <p class="buttonContent">or<p>
@@ -217,36 +221,50 @@ This code is exercise 1, but containing links to the versions of the page that h
         </div>
       </div>
 
-      <div class="halfContainer" id="register">
+      <div class="halfContainer" id="loginSite">
         <div class="contentInputs">
-          <form>
-            Username:
-            <input type="text" class="input_whole" required>
+          <form onsubmit="checkLoginCookie()">
+            Email:
+            <input id="emaillogin" type="email" class="input_whole" required>
             <br><br>
             Password:
-            <input type="password" class="input_whole" maxlength="8" required>
+            <input id="passlogin" type="password" class="input_whole" maxlength="8" required>
+            <br><br>
+            <input type="submit" value="Submit">
+          </form>
+        </div>
+      </div>
+
+      <div class="halfContainer" id="register">
+        <div class="contentInputs">
+          <form onsubmit="checkCookie()">
+            Username:
+            <input id="user" type="text" class="input_whole" required>
+            <br><br>
+            Password:
+            <input id="pass" type="password" class="input_whole" maxlength="8" required>
             <br><br>
             Name:
-            <input type="text" class="input_whole" required>
+            <input id="name" type="text" class="input_whole" required>
             <br></br>
             Surname:
-            <input type="text" class="input_whole" required>
+            <input id="surname" type="text" class="input_whole" required>
             <br><br>
             Email:
-            <input type="email" class="input_whole" required>
+            <input id="email" type="email" class="input_whole" required>
             <br><br>
             Date of Birth:
-            <input type="Date" required>
+            <input id="birth" type="Date" required>
             <br><br>
             Profile Image (URL format):
-            <input type="url" class="input_whole">
+            <input id="image" type="text" class="input_whole">
             <br><br>
             Address:
-            <input type="text" class="input_whole" required>
+            <input id="address" type="text" class="input_whole" required>
             <br><br>
-            <input type="checkbox" required>I have read and accepted the Terms of Use.<br>
+            <input id="terms" type="checkbox" required>I have read and accepted the Terms of Use.<br>
             <br><br>
-            <input type="submit">
+            <input type="submit" value="Submit">
           </form>
         </div>
       </div>
