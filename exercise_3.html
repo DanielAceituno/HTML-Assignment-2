@@ -6,7 +6,9 @@ This code is exercise 1, but containing links to the versions of the page that h
   <title>Good Food!</title>
   <link rel="stylesheet" type="text/css" href="styles/style_pe3.css">
   <script src="scripts.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <meta charset="UTF-8">
+
 </head>
 <body>
 
@@ -282,6 +284,41 @@ This code is exercise 1, but containing links to the versions of the page that h
           <hr>
           <input id="search" type="text" class="searchEng" placeholder="Search Engine for Restaurants, Hotels, etc.">
           <hr>
+        </div>
+        <script>
+          $(document).ready(function(){
+            $('.next').on('click', function(){
+              var currentImg = $('.active');
+              var nextImg = currentImg.next();
+
+              if(nextImg.length){
+                currentImg.removeClass('active').css('z-index', -10);
+                nextImg.addClass('active').css('z-index', 10);
+              }
+            });
+
+            $('.prev').on('click', function(){
+              var currentImg = $('.active');
+              var prevImg = currentImg.prev();
+
+              if(prevImg.length){
+                currentImg.removeClass('active').css('z-index', -10);
+                prevImg.addClass('active').css('z-index', 10);
+              }
+            });
+          });
+        </script>
+        <div class="blockSlider">
+          <div class="slider">
+            <img src="images/arrow-left.png" class="prev" alt="Previous Image">
+            <div class="sliderImage">
+              <img src="images/restaurant_1.jpeg" class="active">
+              <img src="images/restaurant_2.jpg">
+              <img src="images/restaurant_3.jpg">
+              <img src="images/restaurant_4.jpg">
+            </div>
+            <img src="images/arrow-right.png" class="next" alt="Next Image">
+          </div>
         </div>
 
 
