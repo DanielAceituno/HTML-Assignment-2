@@ -21,10 +21,12 @@ This code is exercise 1, but containing links to the versions of the page that h
           <ul class="header_list">
             <li class="header_element"><a onclick="changeToHome()" href="#">Home</a></li>
             <li class="header_element"><a href="#">Posts</a></li>
-            <li id="logout" class="header_element" onclick="logout()"><a href="#">Logout</a></li>
-            <li id="login" class="header_element" onclick="changeToLogReg()"><a href="#">Login</a></li>
+            <li id="login" class="header_element" onclick="changeToLogin()"><a href="#">Login</a></li>
+            <li id="login" class="header_element" onclick="changeToRegister()"><a href="#">Register</a></li>
+            <li id="logout" class="header_element" onclick="changeToLogReg()"><a href="#">Logout</a></li>
           </ul>
       </div>
+
     </header>
 	<br>
 
@@ -273,11 +275,13 @@ This code is exercise 1, but containing links to the versions of the page that h
         </div>
       </div>
 
-      <div class="eightyContainer">
+      <div class="eightyContainer" id="sectionEx3">
         <div class="contentInputs">
           <br><br>
-          <p><i>Search Engine for Restaurants, Hotels, etc.</i></p>
-          <input id="search" type="text" class="input_left">
+          <h1 class="header3">Welcome to Best Food!</h1>
+          <hr>
+          <input id="search" type="text" class="searchEng" placeholder="Search Engine for Restaurants, Hotels, etc.">
+          <hr>
         </div>
 
 

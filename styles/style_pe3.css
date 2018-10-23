@@ -408,6 +408,27 @@ table{ /*Used for exercise_2_2, the table that contains the circles*/
   display: block;
 }
 
+.searchEng{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  background-color: grey;
+  color: white;
+  border: 1px solid darkgrey;
+}
+
+#search::placeholder{
+  color: white;
+  font-style: italic;
+}
+
+.header3{
+  color: lightgreen;
+  text-align: center;
+   text-shadow: 2px 0 0 darkgreen, -2px 0 0 darkgreen, 0 2px 0 darkgreen, 0 -2px 0 darkgreen, 1px 1px darkgreen, -1px -1px 0 darkgreen, 1px -1px 0 darkgreen, -1px 1px 0 darkgreen;
+}
+
 #logout{
   display: none;
 }
@@ -417,7 +438,7 @@ table{ /*Used for exercise_2_2, the table that contains the circles*/
 }
 
 #register{
-  display:none;
+  display: none;
 }
 
 #logReg{

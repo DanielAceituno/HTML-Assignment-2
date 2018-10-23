@@ -9,6 +9,7 @@ function changeToLO(){
     document.getElementById("logReg").style.display="none";
     document.getElementById("register").style.display="none";
     document.getElementById("loginSite").style.display="none";
+    document.getElementById("sectionEx3").style.display="none";
 }
 
 function changeToPI(){
@@ -19,6 +20,7 @@ function changeToPI(){
     document.getElementById("logReg").style.display="none";
     document.getElementById("register").style.display="none";
     document.getElementById("loginSite").style.display="none";
+    document.getElementById("sectionEx3").style.display="none";
 }
 
 function changeToHome(){
@@ -34,6 +36,7 @@ function changeToHome(){
       document.getElementById("logReg").style.display="none";
       document.getElementById("register").style.display="none";
       document.getElementById("loginSite").style.display="none";
+      document.getElementById("sectionEx3").style.display="none";
     }
 }
 
@@ -45,6 +48,7 @@ function changeToLogReg(){
     document.getElementById("logReg").style.display="block";
     document.getElementById("register").style.display="none";
     document.getElementById("loginSite").style.display="none";
+    document.getElementById("sectionEx3").style.display="none";
 }
 
 function changeToRegister(){
@@ -55,6 +59,7 @@ function changeToRegister(){
   document.getElementById("logReg").style.display="none";
   document.getElementById("register").style.display="block";
   document.getElementById("loginSite").style.display="none";
+  document.getElementById("sectionEx3").style.display="none";
 }
 
 function changeToLogin(){
@@ -65,6 +70,7 @@ function changeToLogin(){
   document.getElementById("logReg").style.display="none";
   document.getElementById("register").style.display="none";
   document.getElementById("loginSite").style.display="block";
+  document.getElementById("sectionEx3").style.display="none";
 }
 
 function addTag(){
