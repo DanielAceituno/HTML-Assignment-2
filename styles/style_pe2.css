@@ -91,7 +91,6 @@ table{ /*Used for exercise_2_2, the table that contains the circles*/
   overflow: auto;
   background-color: #ffeb99;
   border-radius: 10px;
-  display: none;
 }
 
 .section_right{ /*This is the container for everything in the right section of the body*/
@@ -113,7 +112,6 @@ table{ /*Used for exercise_2_2, the table that contains the circles*/
   opacity: 0.8;
   border: solid black 1px;
   border-radius: 10px;
-  display: none;
 }
 
 .para_left{ /*For the paragraphs in the left section*/
@@ -397,50 +395,4 @@ table{ /*Used for exercise_2_2, the table that contains the circles*/
 
 .contentInputs{
   margin: 2%;
-}
-
-.eightyContainer{/*div containing the search engine and the pictures (Used as homepage for this exercise)*/
-  border: solid black 1px;
-  margin: 0 auto;
-  width: 80%;
-  background-color: #ffeb99;
-  border-radius: 10px;
-  display: block;
-}
-
-.searchEng{/*Search engine bar*/
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
-  background-color: grey;
-  color: white;
-  border: 1px solid darkgrey;
-}
-
-#search::placeholder{
-  color: white;
-  font-style: italic;
-}
-
-.header3{/*Header that says welcome in the posts section*/
-  color: lightgreen;
-  text-align: center;
-   text-shadow: 2px 0 0 darkgreen, -2px 0 0 darkgreen, 0 2px 0 darkgreen, 0 -2px 0 darkgreen, 1px 1px darkgreen, -1px -1px 0 darkgreen, 1px -1px 0 darkgreen, -1px 1px 0 darkgreen;
-}
-
-#logout{/*Logout panel in the header*/
-  display: none;
-}
-
-#loginSite{/*Login form*/
-  display: none;
-}
-
-#register{/*Rwgister form*/
-  display: none;
-}
-
-#logReg{/*div containing the login and registration buttons*/
-  display: none;
 }

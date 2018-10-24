@@ -5,7 +5,7 @@ This code is exercise 1, but containing links to the versions of the page that h
 <head>
   <title>Good Food!</title>
   <link rel="stylesheet" type="text/css" href="styles/style_pe1.css">
-  <script src="scripts.js"></script>
+  <script src="scripts2.js"></script>
   <meta charset="UTF-8">
 </head>
 <body>
@@ -65,6 +65,11 @@ This code is exercise 1, but containing links to the versions of the page that h
       </div>
 
       <div id="sr0" class="section_right_home"> <!--Used to place the image in the empty right section of the body-->
+      </div>
+
+      <div id="srh" class="section_right_home2"> <!--Used to place the image in the empty right section of the body-->
+        <h1 class="header3">Welcome to Best Food!</h1>
+        <p>To login or Register press login on the top of the page</p>
       </div>
 
       <div id="sr1" class="section_right"> <!--This section will contain a fillable form and a block showing the user's statistics in the page-->
@@ -208,8 +213,9 @@ This code is exercise 1, but containing links to the versions of the page that h
 
 
 
+          <!--An image we added representing a "load more" functionality (not implemented).-->
+          <img class="load_more" src="images/arrow_down.png" alt="Load More" width="15" height="15">
 
-          <img class="load_more" src="images/arrow_down.png" alt="Load More" width="15" height="15"> <!--An image we added representing a "load more" functionality (not implemented).-->
         </div>
       </div>
 
@@ -223,9 +229,10 @@ This code is exercise 1, but containing links to the versions of the page that h
         </div>
       </div>
 
+      <!--This will be the login form in order to login to your account in case there is already one created-->
       <div class="halfContainer" id="loginSite">
         <div class="contentInputs">
-          <form onsubmit="checkLoginCookie()">
+          <form onsubmit="checkLoginCookie()"><!--When submited it has to check if there is an user with that name and the password is correct-->
             Email:
             <input id="emaillogin" type="email" class="input_whole" required>
             <br><br>
@@ -238,9 +245,10 @@ This code is exercise 1, but containing links to the versions of the page that h
         </div>
       </div>
 
+      <!--This will be the register form that will save the cookies-->
       <div class="halfContainer" id="register">
         <div class="contentInputs">
-          <form onsubmit="checkCookie()">
+          <form onsubmit="checkCookie()"><!--This function will save the cookies-->
             Username:
             <input id="user" type="text" class="input_whole" required>
             <br><br>

@@ -4,6 +4,7 @@ var logged=false;//variable to know wether you are logged in or not
 function changeToLO(){//Method to go to last opinions site
     document.getElementById("sl").style.display="block";
     document.getElementById("sr0").style.display="none";
+    document.getElementById("srh").style.display="none";
     document.getElementById("sr1").style.display="none";
     document.getElementById("sr2").style.display="block";
     document.getElementById("logReg").style.display="none";
@@ -17,6 +18,7 @@ function changeToLO(){//Method to go to last opinions site
 
 function changeToPI(){//Method to go to personal information site
     document.getElementById("sl").style.display="block";
+    document.getElementById("srh").style.display="none";
     document.getElementById("sr0").style.display="none";
     document.getElementById("sr1").style.display="block";
     document.getElementById("sr2").style.display="none";
@@ -29,7 +31,7 @@ function changeToPI(){//Method to go to personal information site
     document.getElementById("login").style.display="none";
 }
 
-function changeToHome(){ //Method to go to homepage
+function changeToHome(){//Method to go to homepage
     if(!logged){//It first has to check wether you are logged in or not
       alert("You must login first");
       return;
@@ -38,6 +40,7 @@ function changeToHome(){ //Method to go to homepage
       document.getElementById("sl").style.display="block";
       document.getElementById("sr0").style.display="block";
       document.getElementById("sr1").style.display="none";
+      document.getElementById("srh").style.display="none";
       document.getElementById("sr2").style.display="none";
       document.getElementById("logReg").style.display="none";
       document.getElementById("register").style.display="none";
@@ -52,6 +55,7 @@ function changeToHome(){ //Method to go to homepage
 function changeToLogReg(){//Method to go to login/registration site
     document.getElementById("sl").style.display="none";
     document.getElementById("sr0").style.display="none";
+    document.getElementById("srh").style.display="none";
     document.getElementById("sr1").style.display="none";
     document.getElementById("sr2").style.display="none";
     document.getElementById("logReg").style.display="block";
@@ -66,6 +70,7 @@ function changeToLogReg(){//Method to go to login/registration site
 function changeToRegister(){//Method to go to register form
   document.getElementById("sl").style.display="none";
   document.getElementById("sr0").style.display="none";
+  document.getElementById("srh").style.display="none";
   document.getElementById("sr1").style.display="none";
   document.getElementById("sr2").style.display="none";
   document.getElementById("logReg").style.display="none";
@@ -80,6 +85,7 @@ function changeToRegister(){//Method to go to register form
 function changeToLogin(){//Method to go to login form
   document.getElementById("sl").style.display="none";
   document.getElementById("sr0").style.display="none";
+  document.getElementById("srh").style.display="none";
   document.getElementById("sr1").style.display="none";
   document.getElementById("sr2").style.display="none";
   document.getElementById("logReg").style.display="none";
@@ -91,16 +97,6 @@ function changeToLogin(){//Method to go to login form
   document.getElementById("login").style.display="inline-block";
 }
 
-function changeToPosts(){//Method to go to the search and images form exercise 3
-    document.getElementById("sl").style.display="none";
-    document.getElementById("sr0").style.display="none";
-    document.getElementById("sr1").style.display="none";
-    document.getElementById("sr2").style.display="none";
-    document.getElementById("logReg").style.display="none";
-    document.getElementById("register").style.display="none";
-    document.getElementById("loginSite").style.display="none";
-    document.getElementById("sectionEx3").style.display="block";
-}
 
 function addTag(){//Method to add a tag to the list of preferences
   if(!checkEmptyBox()){
@@ -187,7 +183,7 @@ function checkCookie() {//Checks wether the register has been filled correctly a
        setCookie("image", document.getElementById("image").value, 360);
        document.getElementById("ProfileImage").scr=getCookie("image");
      }
-     //header buttons
+      //header buttons
      document.getElementById("HeaderUsername").innerHTML= getCookie("name") + " " + getCookie("surname");
      document.getElementById("login").style.display="none";
      document.getElementById("logout").style.display="inline-block";
@@ -245,6 +241,7 @@ function checkLoginCookie(){//Checks if the user is registered by checking the c
 function ChangeCookies(){//To change the cookies in the personal information site we check if any of the values is empty
   //If any field is empty an alert will notify the user and only the non-empty boxes will be updated
   //A notification will display for each of the empty fields
+
   if(document.getElementById("name2").value!=""){
     setCookie("name", document.getElementById("name2").value, 360);
     document.getElementById("HeaderUsername").innerHTML= getCookie("name") + " " + getCookie("surname");
