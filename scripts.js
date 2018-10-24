@@ -10,6 +10,9 @@ function changeToLO(){
     document.getElementById("register").style.display="none";
     document.getElementById("loginSite").style.display="none";
     document.getElementById("sectionEx3").style.display="none";
+    document.getElementById("logout").style.display="none";
+    document.getElementById("registerTop").style.display="none";
+    document.getElementById("login").style.display="none";
 }
 
 function changeToPI(){
@@ -21,6 +24,9 @@ function changeToPI(){
     document.getElementById("register").style.display="none";
     document.getElementById("loginSite").style.display="none";
     document.getElementById("sectionEx3").style.display="none";
+    document.getElementById("logout").style.display="none";
+    document.getElementById("registerTop").style.display="none";
+    document.getElementById("login").style.display="none";
 }
 
 function changeToHome(){
@@ -37,6 +43,9 @@ function changeToHome(){
       document.getElementById("register").style.display="none";
       document.getElementById("loginSite").style.display="none";
       document.getElementById("sectionEx3").style.display="none";
+      document.getElementById("logout").style.display="inline-block";
+      document.getElementById("registerTop").style.display="none";
+      document.getElementById("login").style.display="none";
     }
 }
 
@@ -49,6 +58,9 @@ function changeToLogReg(){
     document.getElementById("register").style.display="none";
     document.getElementById("loginSite").style.display="none";
     document.getElementById("sectionEx3").style.display="none";
+    document.getElementById("logout").style.display="none";
+    document.getElementById("registerTop").style.display="inline-block";
+    document.getElementById("login").style.display="inline-block";
 }
 
 function changeToRegister(){
@@ -60,6 +72,9 @@ function changeToRegister(){
   document.getElementById("register").style.display="block";
   document.getElementById("loginSite").style.display="none";
   document.getElementById("sectionEx3").style.display="none";
+  document.getElementById("logout").style.display="none";
+  document.getElementById("registerTop").style.display="inline-block";
+  document.getElementById("login").style.display="inline-block";
 }
 
 function changeToLogin(){
@@ -71,6 +86,20 @@ function changeToLogin(){
   document.getElementById("register").style.display="none";
   document.getElementById("loginSite").style.display="block";
   document.getElementById("sectionEx3").style.display="none";
+  document.getElementById("logout").style.display="none";
+  document.getElementById("registerTop").style.display="inline-block";
+  document.getElementById("login").style.display="inline-block";
+}
+
+function changeToPosts(){
+    document.getElementById("sl").style.display="none";
+    document.getElementById("sr0").style.display="none";
+    document.getElementById("sr1").style.display="none";
+    document.getElementById("sr2").style.display="none";
+    document.getElementById("logReg").style.display="none";
+    document.getElementById("register").style.display="none";
+    document.getElementById("loginSite").style.display="none";
+    document.getElementById("sectionEx3").style.display="block";
 }
 
 function addTag(){
@@ -83,7 +112,7 @@ function addTag(){
   }
 }
 
-function checkEmptyBox(){
+function checkEmptyBox(){ //This function checks, in the tags created, if the last child is empty (through its inner html)
   var content=document.getElementById("tag_list").lastChild.innerHTML;
   if(content=='<p style="display:inline-block" contenteditable="true">&nbsp;</p><button onclick="removeBox(this)">x</button>'){
     return true;
@@ -91,7 +120,7 @@ function checkEmptyBox(){
   return false;
 }
 
-function removeBox(selectedElement){
+function removeBox(selectedElement){ //This method removes the selected tag through the DOM tree.
   selectedElement.parentNode.parentNode.removeChild(selectedElement.parentNode);
 }
 

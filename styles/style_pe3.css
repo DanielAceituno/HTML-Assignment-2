@@ -429,52 +429,6 @@ table{ /*Used for exercise_2_2, the table that contains the circles*/
    text-shadow: 2px 0 0 darkgreen, -2px 0 0 darkgreen, 0 2px 0 darkgreen, 0 -2px 0 darkgreen, 1px 1px darkgreen, -1px -1px 0 darkgreen, 1px -1px 0 darkgreen, -1px 1px 0 darkgreen;
 }
 
-.blockSlider{
-	width:540px;
-	margin:40px auto;
-	overflow:auto;
-}
-
-.sliderImage{
-	width:500px;
-	height:300px;
-	position:relative;
-	overflow:hidden;
-	float:left;
-	padding:3px;
-	border:#666 solid 1px;
-}
-
-.sliderImage img{
-	display:none;
-	width:500px;
-	height:300px;
-}
-
-.sliderImage img.active{
-	display:inline-block;
-}
-
-.prev,.next{
-	float:left;
-	margin-top:130px;
-	cursor: pointer;
-}
-
-.prev{
-	position:relative;
-	margin-right:-45px;
-	z-index:100;
-}
-
-.next{
-	position:relative;
-	margin-left:-45px;
-	z-index:100;
-}
-
-
-
 #logout{
   display: none;
 }
